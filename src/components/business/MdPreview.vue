@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useNoteStore } from '@/composables/useNoteStore';
 import { Marked } from 'marked';
 import { markedHighlight } from "marked-highlight";

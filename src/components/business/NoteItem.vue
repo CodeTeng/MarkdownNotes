@@ -22,11 +22,13 @@ const headings = computed(() => {
   const matches = [];
   let match;
   while ((match = regex.exec(props.note.content)) !== null) {
-    matches.push({
-      level: match[1].length,
-      text: match[2].trim(),
-      index: match.index // Capture character index
-    });
+    if (match[1] && match[2]) {
+      matches.push({
+        level: match[1].length,
+        text: match[2].trim(),
+        index: match.index
+      });
+    }
   }
   return matches;
 });
